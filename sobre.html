@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:ital,wght@0,700;0,800;1,800;1,900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed":"#ffdbcd","primary":"#a33e00","secondary-fixed-dim":"#c8c6c5","surface-container-low":"#f3f3f3","surface-container-highest":"#e2e2e2","primary-container":"#ff6600","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","on-surface":"#1a1c1c","on-primary-container":"#561d00","outline":"#8e7164","on-background":"#1a1c1c","on-tertiary-container":"#2e3030","on-error":"#ffffff","on-tertiary-fixed":"#1a1c1c","tertiary-fixed-dim":"#c6c6c7","tertiary":"#5d5f5f","on-tertiary-fixed-variant":"#454747","on-secondary":"#ffffff","primary-fixed-dim":"#ffb596","secondary-fixed":"#e5e2e1","surface-bright":"#f9f9f9","on-error-container":"#93000a","secondary-container":"#e2dfde","error":"#ba1a1a","error-container":"#ffdad6","on-secondary-fixed-variant":"#474746","surface-dim":"#dadada","surface-variant":"#e2e2e2","background":"#f9f9f9","on-primary-fixed-variant":"#7c2e00","on-secondary-container":"#636262","inverse-primary":"#ffb596","inverse-on-surface":"#f1f1f1","surface-tint":"#a33e00","on-surface-variant":"#5a4136","inverse-surface":"#2f3131","on-secondary-fixed":"#1c1b1b","tertiary-fixed":"#e2e2e2","tertiary-container":"#969797","surface-container":"#eeeeee","secondary":"#5f5e5e","on-primary-fixed":"#360f00","outline-variant":"#e3bfb1","on-primary":"#ffffff","surface":"#f9f9f9","surface-container-high":"#e8e8e8"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"margin-mobile":"20px","container-max":"1280px","unit":"8px","gutter":"24px","margin-desktop":"64px"},"fontFamily":{"caption":["Inter"],"label-bold":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"display-lg":["Montserrat"],"headline-lg-mobile":["Montserrat"],"headline-md":["Montserrat"],"headline-lg":["Montserrat"]},"fontSize":{"caption":["12px",{"lineHeight":"1.4","fontWeight":"500"}],"label-bold":["14px",{"lineHeight":"1.4","letterSpacing":"0.05em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"1.5","fontWeight":"400"}],"display-lg":["64px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg-mobile":["32px",{"lineHeight":"1.2","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"1.3","fontWeight":"700"}],"headline-lg":["40px",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="bg-surface sticky top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant shadow-md">
+        <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <a class="font-headline-md text-headline-md font-black italic tracking-tighter text-on-surface" href="#">Impacto S</a>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-bold text-label-bold"
+                   href="/">Início</a>
+
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-bold text-label-bold"
+                   href="/servicos.html">Serviços</a>
+
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-bold text-label-bold"
+                   href="/contato.html">Contato</a>
+        
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-bold text-label-bold border-b-2 border-primary-container pb-1"
+                   href="/sobre.html" aria-current="page">Sobre</a>
+                </nav>
+        <a class="hidden md:inline-flex bg-primary-container text-on-primary font-headline-md text-[14px] uppercase tracking-widest px-6 py-3 rounded hover:bg-surface-tint hover:scale-105 transition-all" href="https://wa.me/5511916112979?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">Falar Conosco</a>
+        <!-- Mobile Menu Button (Icon) -->
+        <button class="md:hidden text-on-surface p-2">
+        <span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">menu</span>
+        </button>
+        </div>
+        </header><main class="w-full bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Script for Active State and Smooth Actions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Highlight "Sobre" in global shell navbar dynamically
+      const navLinks = document.querySelectorAll('nav a[data-path="sobre"]');
+      navLinks.forEach(link => {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('text-primary-container', 'font-label-bold');
+      });
+
+      // Simple interactive counter pulse on card hover
+      const statCards = document.querySelectorAll('.stat-card');
+      statCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          const num = card.querySelector('.stat-num');
+          if (num) num.classList.add('scale-105');
+        });
+        card.addEventListener('mouseleave', () => {
+          const num = card.querySelector('.stat-num');
+          if (num) num.classList.remove('scale-105');
+        });
+      });
+    });
+  </script>
+<!-- 1. HERO SECTION: Institutional Prestige & Athletic Energy -->
+<section class="relative w-full bg-inverse-surface text-inverse-on-surface overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-28">
+<!-- Dynamic angled background line accents -->
+<div class="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(#ff6600_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-gutter md:px-margin-desktop relative z-10 flex flex-col gap-12">
+<!-- Top Badging & Lead Title -->
+<div class="flex flex-col items-start gap-4 max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-container/20 border-none text-primary-container">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-bold text-caption uppercase tracking-wider text-primary-fixed">QUEM SOMOS • TRADIÇÃO &amp; PERFORMANCE</span>
+</div>
+<h1 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg text-surface-container-lowest font-black tracking-tight leading-tight uppercase">
+          Transformando Condomínios em <span class="text-primary-container">Clubes Exclusivos</span> e Vivos
+        </h1>
+<p class="font-body-lg text-body-lg text-secondary-fixed text-pretty max-w-3xl leading-relaxed">
+          Há mais de 19 anos no mercado, a <strong>Impacto S</strong> desenvolve programas esportivos, recreativos e de gestão técnica sob medida para condomínios residenciais de médio e alto padrão, unindo saúde, convivência comunitária e valorização patrimonial.
+        </p>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter">
+<div class="stat-card bg-on-tertiary-container/60 backdrop-blur-md p-6 rounded-xl flex flex-col justify-between transition-all duration-300 shadow-md">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary-container text-2xl">verified</span>
+<span class="font-caption text-caption text-secondary-fixed uppercase tracking-wider">Histórico</span>
+</div>
+<span class="stat-num font-display-lg text-headline-lg text-surface-container-lowest font-black transition-transform">19+</span>
+<p class="font-caption text-caption text-secondary-fixed mt-1">Anos de Atuação no Mercado Paulista</p>
+</div>
+<div class="stat-card bg-on-tertiary-container/60 backdrop-blur-md p-6 rounded-xl flex flex-col justify-between transition-all duration-300 shadow-md">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary-container text-2xl">groups</span>
+<span class="font-caption text-caption text-secondary-fixed uppercase tracking-wider">Alcance</span>
+</div>
+<span class="stat-num font-display-lg text-headline-lg text-surface-container-lowest font-black transition-transform">+10k</span>
+<p class="font-caption text-caption text-secondary-fixed mt-1">Moradores Ativos Impactados Mensalmente</p>
+</div>
+<div class="stat-card bg-on-tertiary-container/60 backdrop-blur-md p-6 rounded-xl flex flex-col justify-between transition-all duration-300 shadow-md">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary-container text-2xl">badge</span>
+<span class="font-caption text-caption text-secondary-fixed uppercase tracking-wider">Qualidade</span>
+</div>
+<span class="stat-num font-display-lg text-headline-lg text-surface-container-lowest font-black transition-transform">100%</span>
+<p class="font-caption text-caption text-secondary-fixed mt-1">Profissionais Registrados no CREF</p>
+</div>
+<div class="stat-card bg-on-tertiary-container/60 backdrop-blur-md p-6 rounded-xl flex flex-col justify-between transition-all duration-300 shadow-md">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-primary-container text-2xl">sentiment_very_satisfied</span>
+<span class="font-caption text-caption text-secondary-fixed uppercase tracking-wider">Aprovação</span>
+</div>
+<span class="stat-num font-display-lg text-headline-lg text-primary-container font-black transition-transform">95%</span>
+<p class="font-caption text-caption text-secondary-fixed mt-1">Índice de Satisfação de Síndicos e Moradores</p>
+</div>
+</div>
+<!-- Hero Asymmetric Visual Showcase -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-2xl mt-4">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<div class="lg:col-span-8 relative min-h-[380px] lg:min-h-[460px]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Multidisciplinary team of personal trainers and fitness managers wearing sleek black athletic polo shirts with orange Impacto S accents, gathered inside a luxury condominium fitness facility with floor to ceiling windows, looking professional, confident and hospitable." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAikM_zAXHGyNbXejqQbLQtNXpugjKA6-LF4ThHdQParK-yV1t4CfgVk4XVRODu9vZsOwiHGqpNJQ2ISOimmiCg7wuOrRwxoCmcGJwaQhPyej0JSlRkuT8KkGoWTbPcU3EkfBYsJV8PHEdtpnqTsGovWmz5kvuay-jQ9cvXgUzB1mXPmFymwXIJOA6MzTkJR5QHY53ulywqSd98pYnmdSnTOUYJRJOacvi0Z9alB9Wv7Pfa1AVWBNTs6A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/30 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-inverse-surface/20 lg:to-inverse-surface"></div>
+</div>
+<div class="lg:col-span-4 bg-inverse-surface p-8 lg:p-10 flex flex-col justify-center gap-6">
+<div class="flex items-center gap-3">
+<span class="w-10 h-1 bg-primary-container"></span>
+<span class="font-label-bold text-caption text-primary-fixed uppercase tracking-widest">Gestão Integrada</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-surface-container-lowest font-bold">
+              Estruturas Modernas, Presença Atenta
+            </h3>
+<p class="font-body-md text-body-md text-secondary-fixed">
+              Mais do que fornecer instrutores avulsos, a Impacto S coordena cada detalhe: controle de entrada em academias, manutenção preventiva de equipamentos, consultoria de layout esportivo e relacionamento diário com moradores.
+            </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-primary-container hover:text-primary-fixed transition-colors" href="#contato-diagnostico">
+<span>CONHEÇA NOSSO PROCESSO</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. NOSSA HISTÓRIA E PROPÓSITO: Editorial Deep Dive -->
+<section class="w-full py-16 md:py-24 bg-surface-bright text-on-surface">
+<div class="max-w-[1280px] mx-auto px-gutter md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Column: Storytelling -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-xl">history_edu</span>
+<span class="font-label-bold text-caption uppercase tracking-wider text-primary">Nossa Fundação</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-black tracking-tight uppercase text-on-surface">
+            Nossa Trajetória: Paixão pelo Esporte, <span class="text-primary-container">Rigor na Gestão</span>
+</h2>
+<div class="space-y-4 font-body-md text-body-md text-secondary leading-relaxed">
+<p>
+              A <strong>Impacto S</strong> nasceu da observação direta de um desafio comum nos maiores condomínios de São Paulo: academias com equipamentos de última geração vazias, piscinas subutilizadas e quadras sem vida social. As famílias compravam o conceito de morar em um "condomínio-clube", mas na prática encontravam espaços ociosos e dificuldades operacionais para praticar atividades regulares.
+            </p>
+<p>
+              Nosso propósito foi transformar essa realidade. Ao criar programas contínuos de musculação supervisionada, natação infantil, tênis, yoga, recreação nas férias escolares e competições internas, convertemos metros quadrados frios em pontos dinâmicos de encontro e bem-estar.
+            </p>
+<p>
+              O grande diferencial da Impacto S reside na fusão entre a <strong>ciência da atividade física</strong> e um modelo inegociável de <strong>compliance administrativo</strong>. Cada aula e cada evento é respaldado por seguros amplos de responsabilidade civil, regimes de contratação 100% aderentes à CLT e relatórios de métricas que levam paz de espírito aos corpos diretivos e administradoras prediais.
+            </p>
+</div>
+<!-- Manifest Quote Box -->
+<div class="mt-4 p-6 md:p-8 bg-surface-container-high rounded-xl relative overflow-hidden shadow-sm">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-primary-container"></div>
+<span class="material-symbols-outlined text-primary-container/20 text-6xl absolute right-4 top-2 pointer-events-none">format_quote</span>
+<p class="font-headline-md text-headline-md italic font-semibold text-on-surface relative z-10 leading-snug">
+              “O condomínio não precisa ser apenas um lugar onde as pessoas moram; ele pode e deve ser o melhor clube da sua vida.”
+            </p>
+<div class="mt-4 flex items-center gap-3 relative z-10">
+<div class="w-10 h-10 rounded-full bg-on-surface flex items-center justify-center text-on-primary font-display-lg text-caption font-bold">
+                IS
+              </div>
+<div>
+<p class="font-label-bold text-caption font-bold uppercase text-on-surface">Diretoria Executiva</p>
+<p class="font-caption text-caption text-secondary">Impacto S Gestão Esportiva</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Composite Card -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="relative rounded-2xl overflow-hidden shadow-xl">
+<img class="w-full h-80 object-cover" data-alt="Panoramic aerial view of a luxury residential condominium complex at golden hour sunset featuring pristine resort-style swimming pools, illuminated tennis courts with players, and vibrant community members socializing on expansive terraces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg4-wdJWLnWefFIKne0GFI9awLNToxxOSL_hghtgemTfA2NFWZJCYJDQKjXr7aLRfKLXAwKI-QjEEVspeL8AY-INdbPTKqomWKuOqwXLufGPz9GHoFGqPUDI2l21kPpme4WegSKBmtb0vL5PNUiBxrloAM5ZxU8snvnD7S2bU0u0WrSuIwK0JP9ogrsFDzIurn81x_3hpyByh9MztbqHqIFUxF12CbKM4zdETrKFtPiSCbbFXyfUuxtw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent flex items-end p-6">
+<div class="text-surface-container-lowest">
+<span class="font-label-bold text-caption uppercase text-primary-fixed">Convivência Real</span>
+<p class="font-headline-md text-headline-md font-bold mt-1">Mais de 450 eventos e torneios realizados</p>
+</div>
+</div>
+</div>
+<!-- Data Comparison Spark / Micro card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-md flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<span class="font-label-bold text-caption uppercase text-secondary">Adesão Média dos Moradores</span>
+<span class="font-label-bold text-caption text-primary-container font-bold">+78% vs. Modelo Tradicional</span>
+</div>
+<!-- Progress visual bar -->
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary-container w-[78%] rounded-full"></div>
+</div>
+<p class="font-caption text-caption text-on-surface-variant">
+              Condomínios geridos pela Impacto S registram redução drástica de ociosidade de quadras e piscinas logo nos primeiros 90 dias de implantação.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. MISSÃO, VISÃO E VALORES: High Contrast Modern 3-Card Grid -->
+<section class="w-full py-16 md:py-24 bg-surface-container-low text-on-surface">
+<div class="max-w-[1280px] mx-auto px-gutter md:px-margin-desktop flex flex-col gap-12">
+<div class="text-center max-w-2xl mx-auto flex flex-col gap-3">
+<span class="font-label-bold text-caption uppercase tracking-widest text-primary-container">Nossa Bússola Estratégica</span>
+<h2 class="font-headline-lg text-headline-lg font-black uppercase text-on-surface">
+          Missão, Visão &amp; Valores
+        </h2>
+<p class="font-body-md text-body-md text-secondary">
+          Princípios inegociáveis que moldam a conduta dos nossos professores, coordenadores e analistas em cada condomínio cliente.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-gutter">
+<!-- Card 1: Missão -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 flex flex-col justify-between shadow-lg hover:-translate-y-1 transition-transform duration-300">
+<div>
+<div class="w-14 h-14 rounded-xl bg-primary-fixed flex items-center justify-center text-primary-container mb-6">
+<span class="material-symbols-outlined text-3xl">sports</span>
+</div>
+<span class="font-label-bold text-caption uppercase tracking-wider text-primary font-bold">Nosso Propósito Diário</span>
+<h3 class="font-headline-md text-headline-md font-bold mt-2 mb-4 text-on-surface">Missão</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Promover bem-estar, saúde e integração comunitária por meio de programas esportivos planejados com rigor técnico, acompanhamento próximo e entusiasmo constante, valorizando os ambientes sociais de cada condomínio.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t-0 flex items-center gap-2 text-primary-container font-label-bold text-caption uppercase tracking-wider">
+<span>Foco no Morador</span>
+<span class="material-symbols-outlined text-sm">trending_up</span>
+</div>
+</div>
+<!-- Card 2: Visão (Escuro com Destaque Laranja) -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-2xl p-8 flex flex-col justify-between shadow-xl relative overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-primary-container/20 blur-xl"></div>
+<div>
+<div class="w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">visibility</span>
+</div>
+<span class="font-label-bold text-caption uppercase tracking-wider text-primary-fixed font-bold">O Futuro que Construímos</span>
+<h3 class="font-headline-md text-headline-md font-bold mt-2 mb-4 text-surface-container-lowest">Visão</h3>
+<p class="font-body-md text-body-md text-secondary-fixed leading-relaxed">
+              Ser a referência definitiva em assessoria esportiva condominial de alta performance no estado de São Paulo, reconhecida pela excelência técnica incontestável, integridade de processos e tangível valorização dos empreendimentos atendidos.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t-0 flex items-center gap-2 text-primary-container font-label-bold text-caption uppercase tracking-wider">
+<span>Liderança de Mercado</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+</div>
+<!-- Card 3: Valores -->
+<div class="bg-surface-container-lowest rounded-2xl p-8 flex flex-col justify-between shadow-lg hover:-translate-y-1 transition-transform duration-300">
+<div>
+<div class="w-14 h-14 rounded-xl bg-secondary-container flex items-center justify-center text-on-surface mb-6">
+<span class="material-symbols-outlined text-3xl">workspace_premium</span>
+</div>
+<span class="font-label-bold text-caption uppercase tracking-wider text-primary font-bold">Pilares Fundamentais</span>
+<h3 class="font-headline-md text-headline-md font-bold mt-2 mb-4 text-on-surface">Valores</h3>
+<ul class="space-y-3 font-body-md text-body-md text-secondary">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-lg shrink-0 mt-0.5">check_circle</span>
+<span><strong>Rigor Técnico &amp; Ética:</strong> 100% profissionais com CREF ativo e constante reciclagem.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-lg shrink-0 mt-0.5">check_circle</span>
+<span><strong>Segurança Jurídica:</strong> Conformidade trabalhista plena e apólices amplas.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-lg shrink-0 mt-0.5">check_circle</span>
+<span><strong>Humanização:</strong> Atenção empática a todas as idades, do bebê à terceira idade.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-container text-lg shrink-0 mt-0.5">check_circle</span>
+<span><strong>Transparência Operacional:</strong> Dashboards e métricas mensais detalhadas para o síndico.</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-4 border-t-0 flex items-center gap-2 text-primary-container font-label-bold text-caption uppercase tracking-wider">
+<span>Compromisso Ético</span>
+<span class="material-symbols-outlined text-sm">shield</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. OS PILARES DA METODOLOGIA IMPACTO S -->
+<section class="w-full py-16 md:py-24 bg-surface text-on-surface">
+<div class="max-w-[1280px] mx-auto px-gutter md:px-margin-desktop flex flex-col gap-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-3 max-w-2xl">
+<div class="inline-flex items-center gap-2 text-primary-container">
+<span class="material-symbols-outlined text-xl">psychology</span>
+<span class="font-label-bold text-caption uppercase tracking-wider">Metodologia Exclusiva</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-black uppercase text-on-surface">
+            Como Operamos a Excelência Esportiva
+          </h2>
+<p class="font-body-md text-body-md text-secondary">
+            Uma abordagem estruturada em 4 fases contínuas para assegurar alta frequência, segurança aos usuários e tranquilidade total aos gestores prediais.
+          </p>
+</div>
+<div class="hidden md:flex items-center gap-2 text-caption font-label-bold uppercase text-secondary">
+<span class="w-8 h-0.5 bg-primary-container"></span>
+<span>4 Pilares Estruturados</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Bloco 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-lg text-headline-md text-primary-container font-black">01</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Diagnóstico Personalizado</h4>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Mapeamento detalhado do perfil demográfico dos condôminos: faixa etária, rotinas de trabalho, práticas prediletas e objetivos (saúde, emagrecimento, performance ou socialização).
+            </p>
+</div>
+<div class="mt-6 pt-3 bg-surface-container-low px-3 py-2 rounded-lg text-caption font-caption text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Censo esportivo inicial</span>
+</div>
+</div>
+<!-- Bloco 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-lg text-headline-md text-primary-container font-black">02</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Grade de Horários Inteligente</h4>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Distribuição harmônica das aulas ao longo da semana. Otimização das quadras de beach tennis, tênis, piscina e estúdio funcional sem congestionamento nos horários nobres.
+            </p>
+</div>
+<div class="mt-6 pt-3 bg-surface-container-low px-3 py-2 rounded-lg text-caption font-caption text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Zero ociosidade e conflitos</span>
+</div>
+</div>
+<!-- Bloco 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-lg text-headline-md text-primary-container font-black">03</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined">school</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Equipe Especializada e Reciclada</h4>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Treinamentos bimestrais obrigatórios: suporte básico de vida (DEA/primeiros socorros), psicologia do esporte para mediação comunitária e as mais recentes novidades do fitness.
+            </p>
+</div>
+<div class="mt-6 pt-3 bg-surface-container-low px-3 py-2 rounded-lg text-caption font-caption text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Formação contínua</span>
+</div>
+</div>
+<!-- Bloco 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-lg text-headline-md text-primary-container font-black">04</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined">smartphone</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md font-bold text-on-surface mb-2">Tecnologia &amp; App Integrado</h4>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Check-in com antecedência, cancelamento com lista de espera automática, murais de recados e canal direto do morador com a coordenação sem burocracia.
+            </p>
+</div>
+<div class="mt-6 pt-3 bg-surface-container-low px-3 py-2 rounded-lg text-caption font-caption text-on-surface-variant flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Experiência 100% digital</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SEGURANÇA JURÍDICA & RESPONSABILIDADE (Painel Especial para Síndicos e Administradoras) -->
+<section class="w-full py-16 md:py-24 bg-surface-container-highest text-on-surface">
+<div class="max-w-[1280px] mx-auto px-gutter md:px-margin-desktop">
+<div class="bg-inverse-surface text-inverse-on-surface rounded-2xl p-8 md:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+<!-- Stylized orange accent bar on edge -->
+<div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-primary-container via-primary to-primary-container"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/10 w-fit">
+<span class="material-symbols-outlined text-primary-container text-lg">gavel</span>
+<span class="font-label-bold text-caption uppercase tracking-wider text-primary-fixed">Gestão Sem Risco</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-black uppercase text-surface-container-lowest tracking-tight">
+              Segurança Jurídica &amp; Responsabilidade Técnica
+            </h2>
+<p class="font-body-lg text-body-lg text-secondary-fixed">
+              Entendemos a responsabilidade civil e criminal dos síndicos. Por isso, construímos uma blindagem institucional e operacional que permite que sua gestão esportiva seja apenas motivo de orgulho, nunca de dor de cabeça.
+            </p>
+<div class="space-y-4 pt-2">
+<div class="flex items-start gap-4 p-4 rounded-xl bg-on-tertiary-container/40">
+<span class="material-symbols-outlined text-primary-container text-2xl shrink-0 mt-1">policy</span>
+<div>
+<h4 class="font-headline-md text-label-bold font-bold text-surface-container-lowest uppercase">Cobertura Securitária Completa</h4>
+<p class="font-body-md text-caption text-secondary-fixed mt-1">Apólice de responsabilidade civil cobrindo todas as atividades, aulas coletivas, competições e torneios esportivos realizados no condomínio.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-on-tertiary-container/40">
+<span class="material-symbols-outlined text-primary-container text-2xl shrink-0 mt-1">fact_check</span>
+<div>
+<h4 class="font-headline-md text-label-bold font-bold text-surface-container-lowest uppercase">Conformidade Trabalhista Rigorosa</h4>
+<p class="font-body-md text-caption text-secondary-fixed mt-1">Vínculos 100% regulares sob a CLT e repasse tempestivo de certidões negativas de débitos (CND), eliminando risco de solidariedade trabalhista ao condomínio.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-on-tertiary-container/40">
+<span class="material-symbols-outlined text-primary-container text-2xl shrink-0 mt-1">monitoring</span>
+<div>
+<h4 class="font-headline-md text-label-bold font-bold text-surface-container-lowest uppercase">Supervisão Técnica &amp; Relatórios Periódicos</h4>
+<p class="font-body-md text-caption text-secondary-fixed mt-1">Coordenador técnico designado, livro de ocorrências auditado e relatórios executivos mensais entregues à comissão esportiva e síndico geral.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Document & Certification Badge Box -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-container-lowest text-on-surface p-8 rounded-2xl shadow-xl flex flex-col gap-6">
+<div class="flex items-center justify-between pb-4 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-3xl">verified_user</span>
+<div>
+<p class="font-label-bold text-label-bold font-bold text-on-surface">Certificação CREF/SP</p>
+<p class="font-caption text-caption text-secondary">Registro PJ Regularizado</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed text-caption font-label-bold">Ativo</span>
+</div>
+<!-- Compliance checklist -->
+<div class="space-y-3 font-caption text-caption text-on-surface-variant">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">task_alt</span>
+                    Exames Médicos Moradores
+                  </span>
+<span class="font-label-bold text-on-surface">Protocolo Digital</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">task_alt</span>
+                    Treinamento DEA / Primeiros Socorros
+                  </span>
+<span class="font-label-bold text-on-surface">100% Time Apto</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">task_alt</span>
+                    Adesão a Normas da ABNT
+                  </span>
+<span class="font-label-bold text-on-surface">Conforme</span>
+</div>
+</div>
+<div class="bg-surface-container p-4 rounded-xl text-center">
+<p class="font-label-bold text-caption uppercase text-on-surface-variant mb-1">Precisa apresentar ao conselho?</p>
+<a class="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-lg bg-on-background text-on-primary font-label-bold text-caption uppercase tracking-wider hover:bg-primary transition-colors" href="#contato-diagnostico">
+                  Solicitar Kit de Apresentação
+                </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. FINAL CTA BANNER: High Conversion Action -->
+<section class="w-full py-20 bg-surface text-on-surface relative overflow-hidden" id="contato-diagnostico">
+<div class="max-w-[1280px] mx-auto px-gutter md:px-margin-desktop">
+<div class="bg-gradient-to-br from-primary via-primary-container to-primary text-on-primary rounded-3xl p-8 md:p-14 lg:p-16 relative overflow-hidden shadow-2xl">
+<!-- Abstract speed lines in background -->
+<div class="absolute -right-16 -top-16 w-80 h-80 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute right-10 bottom-0 pointer-events-none opacity-15 hidden lg:block">
+<span class="material-symbols-outlined text-[240px] text-white">sports_handball</span>
+</div>
+<div class="max-w-3xl flex flex-col gap-6 relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-white w-fit">
+<span class="material-symbols-outlined text-lg">hotel_class</span>
+<span class="font-label-bold text-caption uppercase tracking-wider">Consultoria Sem Compromisso</span>
+</div>
+<h2 class="font-headline-lg md:font-display-lg text-headline-lg md:text-display-lg font-black tracking-tight leading-none uppercase text-white">
+            Pronto para levar a experiência de clube para o seu condomínio?
+          </h2>
+<p class="font-body-lg text-body-lg text-primary-fixed leading-relaxed">
+            Receba uma visita técnica gratuita dos nossos especialistas esportivos. Realizamos o levantamento completo das áreas comuns do seu empreendimento e elaboramos uma proposta customizada para o perfil dos moradores.
+          </p>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+<a class="inline-flex items-center justify-center bg-on-background text-on-primary font-display-lg text-label-bold uppercase tracking-wider px-8 py-4 rounded-xl shadow-lg hover:bg-surface-container-lowest hover:text-on-surface transition-all duration-200" data-path="contato" href="#">
+              Agendar Visita Diagnóstica Gratuita
+            </a>
+<a class="inline-flex items-center justify-center gap-2 bg-surface-container-lowest text-on-surface font-display-lg text-label-bold uppercase tracking-wider px-8 py-4 rounded-xl shadow-md hover:bg-surface-container-low transition-all duration-200" href="https://wa.me/5511916112979?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Impacto%20S" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary-container text-xl">chat</span>
+              Falar pelo WhatsApp com Especialista
+            </a>
+</div>
+<div class="flex items-center gap-6 pt-2 text-primary-fixed text-caption font-caption">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">schedule</span> Atendimento em até 2 horas
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm">location_on</span> Grande São Paulo e Interior
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+
+<!-- Footer -->
+<footer class="bg-inverse-surface w-full py-16 px-margin-mobile md:px-margin-desktop border-t-4 border-primary">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto text-on-tertiary-fixed">
+
+        <!-- COLUNA 1 - MARCA / REDES SOCIAIS -->
+        <div class="col-span-1 md:col-span-2">
+
+            <a
+                class="font-headline-md text-headline-md font-black italic text-on-primary block mb-6"
+                href="/"
+            >
+                Impacto S
+            </a>
+
+            <p class="font-body-md text-body-md text-tertiary-fixed-dim max-w-md">
+                Transformando condomínios em verdadeiros clubes de alto padrão
+                através da gestão esportiva profissional.
+            </p>
+
+            <!-- Redes sociais -->
+            <div class="flex items-center gap-3 mt-6">
+
+                <!-- Instagram -->
+                <a
+                    href="https://www.instagram.com/impactosgestaoesportiva/https://www.instagram.com/impactosgestaoesportiva/"
+                    aria-label="Instagram"
+                    title="Instagram"
+                    class="w-10 h-10 rounded-full border border-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary-fixed-dim hover:text-on-primary hover:border-primary-container hover:bg-primary-container transition-all"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                    >
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="1"
+                            fill="currentColor"
+                            stroke="none"
+                        ></circle>
+                    </svg>
+                </a>
+
+                <!-- WhatsApp -->
+                <a
+                    href="https://wa.me/5511916112979?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp"
+                    title="WhatsApp"
+                    class="w-10 h-10 rounded-full border border-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary-fixed-dim hover:text-on-primary hover:border-primary-container hover:bg-primary-container transition-all"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path d="M12 2a9.6 9.6 0 0 0-8.3 14.4L2.4 21.6l5.3-1.4A9.6 9.6 0 1 0 12 2Zm0 17.4a7.8 7.8 0 0 1-4-1.1l-.3-.2-3.1.8.8-3-.2-.3A7.8 7.8 0 1 1 12 19.4Zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.8-1.2-.7-.6-1.1-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2.1-.3 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.6 4.1 3.6.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .2-1.1 0-.1-.2-.2-.4-.3Z"/>
+                    </svg>
+                </a>
+
+                <!-- E-mail -->
+                <a
+                    href="mailto:contato@emailimpactos.com.br"
+                    aria-label="E-mail"
+                    title="E-mail"
+                    class="w-10 h-10 rounded-full border border-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary-fixed-dim hover:text-on-primary hover:border-primary-container hover:bg-primary-container transition-all"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                    >
+                        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                        <path d="m4 7 8 6 8-6"></path>
+                    </svg>
+                </a>
+
+                <!-- YouTube -->
+                <a
+                    href="https://www.youtube.com/@ImpactoSGestaoEsportiva"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    title="YouTube"
+                    class="w-10 h-10 rounded-full border border-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary-fixed-dim hover:text-on-primary hover:border-primary-container hover:bg-primary-container transition-all"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        aria-hidden="true"
+                    >
+                        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- COLUNA 2 - LINKS RÁPIDOS -->
+        <div>
+
+            <h4 class="font-label-bold text-label-bold text-on-primary uppercase tracking-wider mb-6">
+                Links Rápidos
+            </h4>
+
+            <ul class="space-y-4">
+
+                <li>
+                    <a
+                        class="font-body-md text-body-md text-tertiary-fixed-dim hover:text-on-primary transition-colors"
+                        href="/servicos.html"
+                    >
+                        Serviços
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="font-body-md text-body-md text-tertiary-fixed-dim hover:text-on-primary transition-colors"
+                        href="/sobre.html"
+                    >
+                        Sobre
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        class="font-body-md text-body-md text-tertiary-fixed-dim hover:text-on-primary transition-colors"
+                        href="/contato.html"
+                    >
+                        Contato
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- COLUNA 3 - CONTATO -->
+        <div>
+
+            <h4 class="font-label-bold text-label-bold text-on-primary uppercase tracking-wider mb-6">
+                Contato
+            </h4>
+
+            <ul class="space-y-4 font-body-md text-body-md text-tertiary-fixed-dim">
+
+                <!-- E-mail -->
+                <li>
+                    <a
+                        href="mailto:contato@emailimpactos.com.br"
+                        class="flex items-center gap-2 hover:text-on-primary transition-colors"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            class="w-5 h-5 shrink-0"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            aria-hidden="true"
+                        >
+                            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                            <path d="m4 7 8 6 8-6"></path>
+                        </svg>
+
+                        <span>contato@emailimpactos.com.br</span>
+                    </a>
+                </li>
+
+                <!-- WhatsApp -->
+                <li>
+                    <a
+                        href="https://wa.me/5511916112979?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 hover:text-on-primary transition-colors"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            class="w-5 h-5 shrink-0"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path d="M12 2a9.6 9.6 0 0 0-8.3 14.4L2.4 21.6l5.3-1.4A9.6 9.6 0 1 0 12 2Zm0 17.4a7.8 7.8 0 0 1-4-1.1l-.3-.2-3.1.8.8-3-.2-.3A7.8 7.8 0 1 1 12 19.4Zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.8-1.2-.7-.6-1.1-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.3-.4.1-.2.1-.3 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.7 2.6 4.1 3.6.6.3 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .2-1.1 0-.1-.2-.2-.4-.3Z"/>
+                        </svg>
+
+                        <span>(11) 91611-2979</span>
+                    </a>
+                </li>
+
+                <!-- Instagram -->
+                <li>
+                    <a
+                        href="https://www.instagram.com/impactosgestaoesportiva/"
+                        class="flex items-center gap-2 hover:text-on-primary transition-colors"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            class="w-5 h-5 shrink-0"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                            aria-hidden="true"
+                        >
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle
+                                cx="17.5"
+                                cy="6.5"
+                                r="1"
+                                fill="currentColor"
+                                stroke="none"
+                            ></circle>
+                        </svg>
+
+                        <span>Instagram</span>
+                    </a>
+                </li>
+
+                <!-- YouTube -->
+                <li>
+                    <a
+                        href="https://www.youtube.com/@ImpactoSGestaoEsportiva"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 hover:text-on-primary transition-colors"
+                    >
+                        <svg
+                            viewBox="0 0 24 24"
+                            class="w-5 h-5 shrink-0"
+                            fill="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12l-6.2 3.6Z"/>
+                        </svg>
+
+                        <span>YouTube</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- RODAPÉ INFERIOR -->
+    <div class="max-w-container-max mx-auto mt-12 pt-8 border-t border-tertiary-fixed-dim/20">
+
+        <p class="font-caption text-caption text-tertiary-fixed-dim">
+            © 2024 Impacto S. Gestão Esportiva Profissional. Todos os direitos reservados.
+        </p>
+
+    </div>
+
+</footer>
+            </body>
+            </html>
